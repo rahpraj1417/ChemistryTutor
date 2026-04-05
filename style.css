@@ -1,0 +1,217 @@
+:root{
+  --bg:#0b1020;
+  --surface:#111a33;
+  --surface2:rgba(17,26,51,.65);
+  --muted:rgba(255,255,255,.03);
+  --text:#eaf0ff;
+  --sub:#b9c6ff;
+  --accent:#7c9bff;
+  --accent2:#55d6be;
+  --border:rgba(255,255,255,.10);
+  --shadow: 0 18px 45px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(124,155,255,.25), transparent 55%),
+    radial-gradient(900px 500px at 85% 20%, rgba(85,214,190,.18), transparent 60%),
+    var(--bg);
+  color:var(--text);
+}
+
+a{color:inherit}
+.container{max-width:1100px; margin:0 auto; padding:0 18px}
+
+.header{
+  position:sticky; top:0;
+  background: rgba(11,16,32,.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index:10;
+}
+.header__inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 0;
+  gap:14px;
+}
+
+.brand{display:flex; gap:12px; align-items:center}
+.brand__logo{
+  width:42px; height:42px; border-radius:12px;
+  display:grid; place-items:center;
+  font-weight:900;
+  background: linear-gradient(135deg, rgba(124,155,255,.95), rgba(85,214,190,.9));
+  color:#081027;
+}
+.brand__name{font-weight:900; letter-spacing:.2px}
+.brand__tag{color:var(--sub); font-size:13px; margin-top:2px}
+
+.nav{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+.nav a{ text-decoration:none; color:var(--sub); font-weight:700 }
+.nav a:hover{ color:var(--text) }
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:11px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  border:1px solid var(--border);
+  font-weight:800;
+}
+.btn--small{ padding:9px 12px; border-radius:11px; font-weight:900 }
+.btn--primary{
+  background: linear-gradient(135deg, rgba(124,155,255,.95), rgba(85,214,190,.92));
+  color:#081027;
+  border-color: transparent;
+  box-shadow: var(--shadow);
+}
+.btn--ghost{background: transparent}
+
+.hero{padding:56px 0 18px}
+.hero__inner{display:grid; grid-template-columns: 1.25fr .75fr; gap:22px; align-items:start}
+.badge{
+  display:inline-flex;
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid rgba(124,155,255,.25);
+  background: rgba(124,155,255,.10);
+  color: var(--text);
+  font-weight:800;
+  font-size:12px;
+}
+.hero__copy h1{font-size:44px; line-height:1.05; margin:10px 0 12px}
+.hero__copy p{color:var(--sub); font-size:16px; line-height:1.7; margin:0 0 18px}
+.hero__cta{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0}
+
+.hero__highlights{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:10px;
+}
+.mini{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:12px;
+  background: rgba(17,26,51,.35);
+}
+.mini__k{color:var(--sub); font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:.4px}
+.mini__v{margin-top:4px; font-weight:800}
+
+.hero__card{
+  background: var(--surface2);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  box-shadow: var(--shadow);
+}
+.hero__card h2{margin:0 0 10px; font-size:18px}
+.checklist{margin:0; padding-left:18px; color:var(--sub)}
+.checklist li{margin:8px 0}
+
+.callout{
+  margin-top:14px;
+  padding:12px;
+  border-radius:12px;
+  background: rgba(85,214,190,.10);
+  border: 1px solid rgba(85,214,190,.22);
+}
+.callout__title{font-weight:900}
+.callout__text{margin-top:4px; color:var(--sub)}
+
+.links{margin-top:14px; display:flex; gap:12px; flex-wrap:wrap}
+.link{color:var(--sub); text-decoration:none; font-weight:800}
+.link:hover{color:var(--text)}
+
+.section{padding:44px 0}
+.section--muted{background: var(--muted); border-top:1px solid var(--border); border-bottom:1px solid var(--border)}
+.section__head{display:flex; justify-content:space-between; align-items:flex-end; gap:18px; flex-wrap:wrap}
+.section h2{margin:0; font-size:28px}
+.section__sub{margin:6px 0 0; color:var(--sub); max-width:70ch}
+
+.grid{margin-top:16px; display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+.card{
+  background: rgba(17,26,51,.55);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+}
+.card h3{margin:0 0 10px}
+.card p{margin:0; color:var(--sub); line-height:1.7}
+
+.bullets{margin:12px 0 0; padding-left:18px; color:var(--sub)}
+.bullets li{margin:7px 0}
+
+.format{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
+}
+.format__item{
+  background: rgba(17,26,51,.35);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+}
+.format__item h3{margin:0 0 8px}
+.format__item p{margin:0; color:var(--sub); line-height:1.7}
+
+.reviews{margin-top:16px; display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+.quote{
+  margin:0;
+  background: rgba(17,26,51,.45);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+}
+.quote blockquote{
+  margin:0;
+  color:var(--text);
+  line-height:1.7;
+  font-weight:700;
+}
+.quote figcaption{margin-top:10px; color:var(--sub); font-size:13px; font-weight:800}
+
+.note{
+  margin-top:14px;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid rgba(124,155,255,.25);
+  background: rgba(124,155,255,.08);
+  color: var(--sub);
+}
+
+.about{margin-top:16px; display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+.linksList{margin:0; padding-left:18px; color:var(--sub)}
+.linksList a{color:var(--text)}
+.linksList a:hover{opacity:.9}
+
+.contact{margin-top:16px; display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+.ctaRow{margin-top:16px; display:flex; gap:12px; flex-wrap:wrap}
+
+.footer{
+  padding:24px 0;
+  color:var(--sub);
+  font-size:14px;
+}
+.footer__inner{display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+.footer__links{display:flex; gap:12px}
+.footer__links a{color:var(--sub); text-decoration:none; font-weight:800}
+.footer__links a:hover{color:var(--text)}
+
+.fineprint{color:var(--sub); font-size:13px; margin-top:14px}
+
+@media (max-width: 950px){
+  .hero__inner{grid-template-columns:1fr}
+  .hero__copy h1{font-size:36px}
+  .grid{grid-template-columns:1fr}
+  .format{grid-template-columns:1fr}
+  .reviews{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+}
