@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,7 +22,13 @@
         <a href="#services">Services</a>
         <a href="#reviews">Reviews</a>
         <a href="#about">About</a>
-        <a href="#contact" class="btn btn--primary btn--small">Contact</a>
+        <a href="#contact">Contact</a>
+
+        <button id="themeToggle" class="btn btn--ghost btn--small" type="button" aria-label="Toggle theme">
+          Toggle theme
+        </button>
+
+        <a href="#contact" class="btn btn--primary btn--small">Book</a>
       </nav>
     </div>
   </header>
@@ -32,10 +38,10 @@
       <div class="container hero__inner">
         <div class="hero__copy">
           <div class="badge">Accepting new students</div>
-          <h1>Build confidence in chemistry with clear, step‑by‑step tutoring.</h1>
+          <h1>Make chemistry feel simple—and actually stick.</h1>
           <p>
-            Personalized lessons that focus on understanding concepts, practicing the right problems,
-            and preparing for tests—without the overwhelm.
+            Personalized tutoring for high school, AP Chemistry, and intro college chemistry.
+            Remote, in-person, or home visits depending on what works best for you.
           </p>
 
           <div class="hero__cta">
@@ -46,31 +52,45 @@
           <div class="hero__highlights">
             <div class="mini">
               <div class="mini__k">Audience</div>
-              <div class="mini__v">High school • AP Chem • Intro college</div>
+              <div class="mini__v">High school • AP Chem • College</div>
             </div>
             <div class="mini">
               <div class="mini__k">Format</div>
               <div class="mini__v">Remote • In‑person • Home visits</div>
             </div>
             <div class="mini">
-              <div class="mini__k">Approach</div>
+              <div class="mini__k">Focus</div>
               <div class="mini__v">Concepts → practice → exam strategy</div>
             </div>
           </div>
         </div>
 
         <div class="hero__card">
-          <h2>What we’ll do in sessions</h2>
+          <div class="profile">
+            <!-- Put your photo at: photo.jpg (repo root) OR update the src -->
+            <img class="profile__photo" src="photo.jpg" alt="Photo of Saanvi Gupte" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';" />
+            <div id="photoFallback" class="profile__fallback" style="display:none;">
+              Add your photo<br/>
+              <span class="profile__hint">Upload <strong>photo.jpg</strong> to the repo</span>
+            </div>
+
+            <div class="profile__meta">
+              <div class="profile__name">Saanvi Gupte</div>
+              <div class="profile__line">Chemistry Tutor</div>
+            </div>
+          </div>
+
+          <h2 class="mt">What we’ll do in sessions</h2>
           <ul class="checklist">
-            <li>Identify weak areas and fix foundations</li>
-            <li>Work through problems with a repeatable method</li>
-            <li>Build a study plan (what to do between sessions)</li>
+            <li>Fix foundations (so new topics feel easier)</li>
+            <li>Learn a repeatable problem-solving method</li>
+            <li>Practice with targeted questions</li>
             <li>Review mistakes so they don’t repeat</li>
           </ul>
 
           <div class="callout">
             <div class="callout__title">Free 10–15 minute intro</div>
-            <div class="callout__text">We’ll set goals and choose the best tutoring format for you.</div>
+            <div class="callout__text">We’ll set goals and choose the best format for you.</div>
           </div>
 
           <div class="links">
@@ -86,38 +106,38 @@
         <div class="section__head">
           <div>
             <h2>Services</h2>
-            <p class="section__sub">Choose what fits your schedule and learning style.</p>
+            <p class="section__sub">Fun, structured tutoring—built around how you learn.</p>
           </div>
         </div>
 
         <div class="grid">
           <div class="card">
-            <h3>1:1 Tutoring (Weekly)</h3>
-            <p>Ongoing support aligned to your class—concept review + problem practice.</p>
+            <h3>1:1 Tutoring</h3>
+            <p>Weekly sessions aligned to your class: concept clarity + strong fundamentals.</p>
             <ul class="bullets">
-              <li>High school chemistry</li>
+              <li>High school + honors</li>
               <li>AP Chemistry</li>
-              <li>Intro college / gen chem</li>
+              <li>Intro college chemistry</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Test Prep</h3>
-            <p>Targeted sessions before an exam: focus areas, strategy, and practice sets.</p>
+            <p>Focused prep before exams: strategy, practice sets, and confidence-building.</p>
             <ul class="bullets">
               <li>Timed practice</li>
               <li>Error analysis</li>
-              <li>Formula & concept review</li>
+              <li>Review sheets</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Homework Help</h3>
-            <p>We’ll work through problems so you understand the “why,” not just the answer.</p>
+            <p>We’ll work through problems so you can do them on your own next time.</p>
             <ul class="bullets">
-              <li>Guided problem solving</li>
+              <li>Guided solving</li>
               <li>Study skills</li>
-              <li>Confidence building</li>
+              <li>Better habits</li>
             </ul>
           </div>
         </div>
@@ -125,7 +145,7 @@
         <div class="format">
           <div class="format__item">
             <h3>Remote</h3>
-            <p>Zoom/Google Meet with a shared whiteboard and practice problems.</p>
+            <p>Zoom/Google Meet + shared whiteboard and practice problems.</p>
           </div>
           <div class="format__item">
             <h3>In‑person</h3>
@@ -133,13 +153,9 @@
           </div>
           <div class="format__item">
             <h3>Home visits</h3>
-            <p>Available by request. (Add your travel area + travel fee policy here.)</p>
+            <p>Available by request (add your city/area + travel policy).</p>
           </div>
         </div>
-
-        <p class="fineprint">
-          Tip: add your rate and cancellation policy once you decide them.
-        </p>
       </div>
     </section>
 
@@ -147,36 +163,24 @@
       <div class="container">
         <div class="section__head">
           <div>
-            <h2>References & Reviews</h2>
-            <p class="section__sub">Add short quotes from students/parents/teachers (with permission).</p>
+            <h2>Reviews</h2>
+            <p class="section__sub">Replace these with real reviews (short + specific).</p>
           </div>
         </div>
 
         <div class="reviews">
           <figure class="quote">
-            <blockquote>
-              “Saanvi explained equilibrium in a way that finally clicked. My test grade improved immediately.”
-            </blockquote>
-            <figcaption>— Student (AP Chemistry)</figcaption>
+            <blockquote>“I finally understood equilibrium and my grade jumped.”</blockquote>
+            <figcaption>— AP Chemistry student</figcaption>
           </figure>
-
           <figure class="quote">
-            <blockquote>
-              “Very organized sessions and great practice problems. Helped me feel confident before finals.”
-            </blockquote>
+            <blockquote>“Super clear explanations and great practice problems.”</blockquote>
             <figcaption>— College student (Gen Chem)</figcaption>
           </figure>
-
           <figure class="quote">
-            <blockquote>
-              “Patient and encouraging—my child stopped dreading chemistry.”
-            </blockquote>
+            <blockquote>“Patient, encouraging, and really organized.”</blockquote>
             <figcaption>— Parent</figcaption>
           </figure>
-        </div>
-
-        <div class="note">
-          Want: 3–6 reviews total. Keep each to 1–2 sentences and specific (topic + result).
         </div>
       </div>
     </section>
@@ -186,28 +190,26 @@
         <div class="section__head">
           <div>
             <h2>About</h2>
-            <p class="section__sub">
-              Write 3–5 sentences here about your background and how you teach.
-            </p>
+            <p class="section__sub">Add your background, what you tutor, and what students can expect.</p>
           </div>
         </div>
 
         <div class="about">
           <div class="card">
-            <h3>Teaching style</h3>
+            <h3>My approach</h3>
             <p>
-              I break down concepts into simple steps, then we practice until you can do it independently.
-              We’ll focus on the patterns behind the problems so chemistry feels predictable.
+              I teach chemistry in a way that’s structured and friendly: we simplify concepts, then practice until
+              you feel confident. I’ll help you build a study plan and learn how to avoid common mistakes.
             </p>
           </div>
 
           <div id="profiles" class="card">
-            <h3>Profiles</h3>
+            <h3>Links</h3>
             <ul class="linksList">
               <li><a href="LINKEDIN_URL_HERE" target="_blank" rel="noreferrer">LinkedIn</a></li>
               <li><a href="RESUME_URL_HERE" target="_blank" rel="noreferrer">Resume (PDF)</a></li>
             </ul>
-            <p class="fineprint">Replace these links with your real URLs.</p>
+            <p class="fineprint">Replace the placeholders with your real URLs.</p>
           </div>
         </div>
       </div>
@@ -218,7 +220,7 @@
         <div class="section__head">
           <div>
             <h2>Contact</h2>
-            <p class="section__sub">Fastest way to reach me: email.</p>
+            <p class="section__sub">Email me and I’ll reply with availability.</p>
           </div>
         </div>
 
@@ -226,17 +228,15 @@
           <div class="card">
             <h3>Email</h3>
             <p><a href="mailto:saanvigupte@gmail.com">saanvigupte@gmail.com</a></p>
-            <p class="fineprint">Include: course level, topics, and your next test date (if any).</p>
+            <p class="fineprint">Include course level + topics + next test date (if any).</p>
           </div>
-
           <div class="card">
             <h3>Availability</h3>
-            <p>Add your typical hours (e.g., Weeknights + weekends).</p>
+            <p>Add your typical hours here.</p>
           </div>
-
           <div class="card">
             <h3>Location</h3>
-            <p>Remote sessions anywhere. In‑person by request (add your city/area here).</p>
+            <p>Remote anywhere. In‑person by request (add your city/area).</p>
           </div>
         </div>
 
