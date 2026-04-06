@@ -278,3 +278,62 @@ a{color:inherit}
   .about{grid-template-columns:1fr}
   .contact{grid-template-columns:1fr}
 }
+
+/* Extra-mobile polish */
+@media (max-width: 520px){
+  .container{padding: 0 14px;}
+
+  /* Header: stack nicely and keep buttons visible */
+  .header__inner{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  .nav{
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .nav a, .nav button{
+    font-size: 14px;
+  }
+
+  /* Make primary buttons easier to tap */
+  .btn{
+    padding: 12px 14px;
+  }
+  .btn--small{
+    padding: 10px 12px;
+  }
+
+  /* Hero typography spacing */
+  .hero{padding: 34px 0 10px;}
+  .hero__copy h1{font-size: 30px; line-height: 1.08;}
+  .hero__cta{gap: 10px;}
+  .hero__cta .btn{width: 100%;}
+
+  /* Cards feel less cramped */
+  .card, .hero__card, .mini, .format__item, .quote{
+    border-radius: 14px;
+    padding: 14px;
+  }
+
+  /* Profile row: keep it tidy */
+  .profile{
+    padding: 10px;
+  }
+  .profile__photo, .profile__fallback{
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+  }
+
+  /* Footer stack */
+  .footer__inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
