@@ -21,3 +21,27 @@ btn.addEventListener("click", () => {
   const current = root.getAttribute("data-theme");
   setTheme(current === "dark" ? "light" : "dark");
 });
+
+// Mobile hamburger menu
+const menuBtn = document.getElementById("menuBtn");
+const menuPanel = document.getElementById("menuPanel");
+
+function closeMenu() {
+  document.documentElement.classList.remove("nav-open");
+  menuBtn.setAttribute("aria-expanded", "false");
+}
+
+menuBtn.addEventListener("click", () => {
+  const open = document.documentElement.classList.toggle("nav-open");
+  menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+});
+
+// Close menu when a link is clicked
+menuPanel.addEventListener("click", (e) => {
+  if (e.target && e.target.tagName === "A") closeMenu();
+});
+
+// Close on Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
+});
